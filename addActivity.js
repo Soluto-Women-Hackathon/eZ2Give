@@ -1,6 +1,6 @@
 var jsonfile = require('jsonfile');
 
-var file = './myjsonfile.json';
+var file = './activities.json';
 
 jsonfile.readFile(file, function(err, activities) {
   //console.log(activities);
