@@ -3,23 +3,34 @@
     <head></head>
     
     <body>
+        
         <form>
+            
               First name:<br>
              <input type="text" name="firstName"><br>
   Last name:<br>
   <input type="text" name="lastName"><br>
             Email:<br>
             <input type="text" name="email"><br>
-            <input type="button" value="Register" onClick="addActivity(firstName.value, lastName.value, email.value)">
+            <input type="button" value="Register" onClick="processUser(firstName.value, lastName.value, email.value)">
 
 
         </form>
         
         
-        <script src="addActivity.js">
-//            function addActivity(firstName, lastName, email){
-//                alert(firstName+' '+lastName+' '+email)
-//            }
-        </script>
+        <script src="addActivity.js"></script>
+           <script>
+               
+  function processUser(firstName,lastName,email)
+  {
+    var eventName =decodeURIComponent(location.search.substring(1));
+    alert(eventName+" "+firstName);
+      addActivity(eventName,firstName,lastName,email)
+      
+
+  }  
+               
+</script>
+
     </body>
 </html>

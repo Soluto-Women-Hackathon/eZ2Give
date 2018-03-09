@@ -21,7 +21,7 @@
       navLinks: true, // can click day/week names to navigate views
       selectable: true,
       selectHelper: true,
-      select: function(start, end) {
+      select: function(title) {
         var title = prompt('Event Title:');
         var eventData;
         if (title) {
@@ -30,32 +30,35 @@
             start: start,
             end: end
           };
+
           $('#calendar').fullCalendar('renderEvent', eventData, true); // stick? = true
         }
         $('#calendar').fullCalendar('unselect');
       },
-      editable: true,
+      editable: false,
       eventLimit: true, // allow "more" link when too many events
       events: [
         {
           title: 'S.O.S- walk dogs',
-             url: 'file:///C:/Users/48/Documents/eZ2Give/register4activity.html',
+            
+             url: 'file:///C:/Users/48/Documents/eZ2Give/register4activity.html?S.O.S- walk dogs',
           start: '2018-03-01'
         },
         {
           title: 'Akim- big brother',
-             url: 'file:///C:/Users/48/Documents/eZ2Give/register4activity.html',
+             url: 'file:///C:/Users/48/Documents/eZ2Give/register4activity.html?Akim- big brother',
           start: '2018-03-07'
         },
         {
           title: 'Mehamemet- Android workshop',
-             url: '../../register4activity.html',
+            
+             url: '../../register4activity.html?Mehamemet- Android workshop',
           start: '2018-03-11',
           end: '2018-03-13'
         },
         {
           title: 'she codes;',
-             url: '../../register4activity.html',
+             url: '../../register4activity.html?she codes;',
           start: '2018-03-12T10:30:00',
           end: '2018-03-12T12:30:00'            
             
@@ -63,7 +66,7 @@
         
         {
           title: 'Cyber Olympics',
-          url: '../../register4activity.html',
+          url: '../../register4activity.html?Cyber Olympics',
           start: '2018-03-28'
         }
       ]
